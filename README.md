@@ -3,7 +3,7 @@
 <div align="center">
 
 
-  <h1><b>Leaderboard</b></h1>
+  <h1><b>Capstone-js</b></h1>
 
 </div>
 
@@ -12,7 +12,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Leaderboard](#-leaderboard)
+- [📖 Capstone-js](#-capstone-js)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -34,9 +34,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Leaderboard<a name="about-project"></a>
+# 📖 Capstone-js<a name="about-project"></a>
 
-In Leaderboard Project we work only in plain JavaScript and Html.
+ Capstone-js Project we work only in plain JavaScript and Html.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -91,7 +91,7 @@ To get a local copy up and running, follow these steps.
 Clone this repository to your desired folder:
 
 ```sh
-  git clone https://github.com/SergioPeralta22/MV-Leaderboard.git
+  git clone https://github.com/SergioPeralta22/MV-Capstone-js.git
 ```
 
 ### Install
@@ -99,7 +99,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd MV-Leaderboard
+  cd MV-Capstone-js
   npm install
 ```
 
@@ -127,7 +127,7 @@ Example command:
 
 ### Deployment
 
-> [Leaderboard](https://sergioperalta22.github.io/MV-Leaderboard/)
+> [Capstone-js](https://sergioperalta22.github.io/MV-Capstone-js/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
