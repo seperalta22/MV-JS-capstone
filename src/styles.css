@@ -1,3 +1,7 @@
+:root {
+  --color-body: #131313;
+}
+
 *,
 *::after,
 *::before {
@@ -5,3 +9,49 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  color: var(--color-body);
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+}
+
+/* header section */
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 4rem;
+}
+
+.nav-link {
+  color: var(--color-body);
+}
+
+li {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Footer section */
+footer {
+  text-align: center;
+  height: 40px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
