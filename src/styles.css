@@ -70,10 +70,16 @@ footer {
   z-index: 5000;
 }
 
+.text-container {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
 .comment-container {
   background-color: #f2f2f2;
   width: 90%;
-  height: 90%;
+  max-width: 60rem;
+  height: 95%;
   margin: 1.6rem auto;
   padding: 1.8rem;
   gap: 1.2rem;
@@ -94,6 +100,7 @@ footer {
 .comment-img {
   display: block;
   margin: 0 auto;
+  height: 20rem;
 }
 
 .comment-title {
@@ -105,11 +112,60 @@ footer {
 
 .properties ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 .properties li {
-  margin: 1rem 2rem;
+  margin: 1rem 0;
   font-size: 1.2rem;
+}
+
+.comment-display {
+  margin: 3rem auto;
+}
+
+.comment-display h3 {
+  text-align: center;
+  margin: 3rem auto;
+  font-size: 1.5rem;
+}
+
+.form-title {
+  text-align: center;
+  margin: 3rem auto;
+  font-size: 1.5rem;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.2rem;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 60%;
+  padding: 1rem;
+  border: 1px solid #dfe1e6;
+  border-radius: 1.2rem;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  outline: none;
+}
+
+.comment-form button {
+  width: 60%;
+  padding: 1rem;
+  border: none;
+  border-radius: 1.2rem;
+  background-color: #131313;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
 }
