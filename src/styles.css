@@ -1,115 +1,171 @@
 :root {
-  --color-body: #131313;
+	--color-body: #131313;
 }
 
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  color: var(--color-body);
-  font-family: 'Montserrat', sans-serif;
-  height: 100vh;
+	color: var(--color-body);
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
 }
 
 /* header section */
 header {
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
+	font-size: 1.5rem;
+	font-weight: 700;
 }
 
 .nav-menu {
-  display: flex;
-  gap: 4rem;
+	display: flex;
+	gap: 4rem;
 }
 
 .nav-link {
-  color: var(--color-body);
+	color: var(--color-body);
 }
 
 li {
-  list-style: none;
-  padding-left: 0;
+	list-style: none;
+	padding-left: 0;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 /* Footer section */
 footer {
-  text-align: center;
-  height: 40px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+	text-align: center;
+	height: 40px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 
 /* *  comments pop up */
 
 .comments {
-  display: block;
-  position: fixed;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(5px);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5000;
+	display: block;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(5px);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5000;
+}
+
+.text-container {
+	max-width: 60%;
+	margin: 0 auto;
 }
 
 .comment-container {
-  background-color: #f2f2f2;
-  width: 90%;
-  height: 90%;
-  margin: 1.6rem auto;
-  padding: 1.8rem;
-  gap: 1.2rem;
-  border: 1px solid #dfe1e6;
-  border-radius: 1.6rem;
-  position: relative;
+	background-color: #f2f2f2;
+	width: 90%;
+	max-width: 60rem;
+	height: 95%;
+	margin: 1.6rem auto;
+	padding: 1.8rem;
+	gap: 1.2rem;
+	border: 1px solid #dfe1e6;
+	border-radius: 1.6rem;
+	position: relative;
 }
 
 .x {
-  position: absolute;
-  top: 1rem;
-  right: 2rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  cursor: pointer;
+	position: absolute;
+	top: 1rem;
+	right: 2rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+	cursor: pointer;
 }
 
 .comment-img {
-  display: block;
-  margin: 0 auto;
+	display: block;
+	margin: 0 auto;
+	height: 20rem;
 }
 
 .comment-title {
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin: 1.2rem 0;
+	text-align: center;
+	font-size: 1.8rem;
+	font-weight: 700;
+	margin: 1.2rem 0;
 }
 
 .properties ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .properties li {
-  margin: 1rem 2rem;
-  font-size: 1.2rem;
+	margin: 1rem 0;
+	font-size: 1.2rem;
+}
+
+.comment-display {
+	margin: 3rem auto;
+}
+
+.comment-display h3 {
+	text-align: center;
+	margin: 3rem auto;
+	font-size: 1.5rem;
+}
+
+.form-title {
+	text-align: center;
+	margin: 3rem auto;
+	font-size: 1.5rem;
+}
+
+.comment-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	gap: 1.2rem;
+}
+
+.comment-form input,
+.comment-form textarea {
+	width: 60%;
+	padding: 1rem;
+	border: 1px solid #dfe1e6;
+	border-radius: 1.2rem;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+	outline: none;
+}
+
+.comment-form button {
+	width: 60%;
+	padding: 1rem;
+	border: none;
+	border-radius: 1.2rem;
+	background-color: #131313;
+	color: #fff;
+	font-size: 1.2rem;
+	font-weight: 700;
+	cursor: pointer;
 }
