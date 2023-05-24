@@ -1,5 +1,7 @@
+import commentsCounter from './commentsCounter.js';
+
 const pokemonUrl = 'https://pokeapi.co/api/v2/pokemon/';
-const involvementUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/edecTBZJTxSFvT9kueVx/likes/';
+const involvementUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/edecTBZJTxSFvT9kueVx/';
 
 const getPokemons = async () => {
   const response = await fetch(`${pokemonUrl}?limit=10`);
@@ -42,31 +44,36 @@ const postLike = async (id) => {
 
 // comments
 
-const getComments = async () => {
-  const response = await fetch(`${involvementUrl}comments/`);
-  const data = await response.json();
-  return data;
+const getComments = async (index) => {
+  const response = await fetch(
+    `${involvementUrl}comments?item_id=item${index}`,
+  );
+  const arr = await response.json();
+  const div = document.getElementById('con-comments');
+  div.innerHTML = '';
+  arr.forEach((element) => {
+    const comment = document.createElement('p');
+    comment.className = 'user-comment';
+    comment.innerText = `${element.creation_date}  ${element.username}: ${element.comment}`;
+    div.appendChild(comment);
+  });
+  const count = document.querySelectorAll('.user-comment');
+  commentsCounter(count.length);
 };
 
-const getComment = async (id) => {
-  const response = await fetch(`${involvementUrl}comments/?item_id=${id}`);
-  const data = await response.json();
-  return data;
-};
-
-const postComment = async (id, user, comment) => {
-  const response = await fetch(`${involvementUrl}comment/`, {
+const postComment = async (id, name, comment) => {
+  await fetch(`${involvementUrl}comments/`, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
     },
     body: JSON.stringify({
-      item_id: id,
-      username: user,
+      item_id: `item${id}`,
+      username: name,
       comment,
     }),
   });
-  return response;
+  await getComments(id);
 };
 
 export {
@@ -76,6 +83,5 @@ export {
   getLike,
   postLike,
   getComments,
-  getComment,
   postComment,
 };
