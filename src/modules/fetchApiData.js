@@ -22,11 +22,10 @@ const fetchApiData = async () => {
           <h2 class="card-name">${pokemonData.name}</h2>
           <button class="likes-btn"><i class="fas fa-heart"></i></button>
           <span class="likes-counter" >5 likes</span>
-          <button ${pokemonData.id} class="btn">Comments</button>
+          <button id=${pokemonData.id} class="btn">Comments</button> 
         `;
 
     mainSection.appendChild(card);
   });
 };
-
-fetchApiData();
+export default fetchApiData;

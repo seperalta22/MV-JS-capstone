@@ -118,7 +118,7 @@ h1 {
 /* *  comments pop up */
 
 .comments {
-  display: block;
+  display: none;
   position: fixed;
   justify-content: center;
   align-items: center;
