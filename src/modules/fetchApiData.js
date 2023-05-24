@@ -2,6 +2,7 @@ import popUp from './popUp.js';
 import pokemonsCount from './pokemonCount.js';
 import { addLikes, getLikes } from './likes.js';
 
+
 const fetchApiData = async () => {
   const res = await fetch('https://pokeapi.co/api/v2/pokemon');
   const data = await res.json();
