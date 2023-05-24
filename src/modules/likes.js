@@ -29,6 +29,12 @@ const addLikes = async () => {
 
   likeBtns.forEach((button, index) => {
     button.addEventListener('click', async () => {
+      button.disabled = true;
+
+      if (likeIcons[index].classList.contains('fas')) {
+        return;
+      }
+
       likeIcons[index].classList.remove('far');
       likeIcons[index].classList.add('fas');
 
