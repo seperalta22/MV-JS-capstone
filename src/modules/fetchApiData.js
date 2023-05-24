@@ -1,5 +1,7 @@
 import popUp from './popUp.js';
 import pokemonsCount from './pokemonCount.js';
+import { addLikes, getLikes } from './likes.js';
+
 
 const fetchApiData = async () => {
   const res = await fetch('https://pokeapi.co/api/v2/pokemon');
@@ -24,8 +26,8 @@ const fetchApiData = async () => {
         alt="${pokemonData.name}"
       />
       <h2 class="card-name">${pokemonData.name}</h2>
-      <button class="likes-btn"><i class="fas fa-heart"></i></button>
-      <span class="likes-counter" >5 likes</span>
+      <button class="likes-btn"><i class="far fa-heart"></i></button>
+      <span class="likes-counter" >0 likes</span>
       <button id=${pokemonData.id} class="btn">Comments</button>
     `;
 
@@ -41,10 +43,14 @@ const fetchApiData = async () => {
             popUp(pokemonData.id);
             modal.style.display = 'block';
           });
+
+          addLikes();
         }
       });
     }),
   );
+
+  await getLikes();
 };
 
 export default fetchApiData;
