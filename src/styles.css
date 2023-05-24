@@ -53,11 +53,19 @@ a {
 
 /* Footer section */
 footer {
+  background-color: darkolivegreen;
+  border-top: 1px solid #dfe1e6;
   text-align: center;
-  height: 40px;
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+footer p {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1rem;
 }
 
 /* Main heading */
