@@ -1,4 +1,5 @@
 import popUp from './popUp.js';
+import pokemonsCount from './pokemonCount.js';
 
 const fetchApiData = async () => {
   const res = await fetch('https://pokeapi.co/api/v2/pokemon');
@@ -29,6 +30,8 @@ const fetchApiData = async () => {
     `;
 
       mainSection.appendChild(card);
+
+      pokemonsCount();
 
       const commentsButton = document.querySelectorAll('.btn');
       const modal = document.querySelector('.comments');
