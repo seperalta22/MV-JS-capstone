@@ -110,15 +110,16 @@ h1 {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 15%;
+  gap: 3rem;
   justify-content: center;
-  margin: 4rem 0 4rem;
+  margin: 4rem auto;
+  max-width: 90%;
 }
 
 /* *  comments pop up */
 
 .comments {
-  display: block;
+  display: none;
   position: fixed;
   justify-content: center;
   align-items: center;
@@ -152,7 +153,7 @@ h1 {
   position: absolute;
   top: 1rem;
   right: 2rem;
-  font-size: 1.5rem;
+  font-size: 4rem;
   font-weight: 700;
   cursor: pointer;
 }
@@ -168,9 +169,10 @@ h1 {
   font-size: 1.8rem;
   font-weight: 700;
   margin: 1.2rem 0;
+  text-transform: uppercase;
 }
 
-.properties ul {
+.properties {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -178,14 +180,19 @@ h1 {
 
 .properties li {
   margin: 1rem 0;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.properties li span {
+  font-weight: 400;
 }
 
 .comment-display {
   margin: 3rem auto;
 }
 
-.comment-display h3 {
+.com-title {
   text-align: center;
   margin: 3rem auto;
   font-size: 1.5rem;
@@ -229,3 +236,7 @@ h1 {
   font-weight: 700;
   cursor: pointer;
 }
+
+/* #con-comments{} */
+
+/* .user-comment{} */
