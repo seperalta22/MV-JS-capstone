@@ -110,9 +110,10 @@ h1 {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 15%;
+  gap: 3rem;
   justify-content: center;
-  margin: 4rem 0 4rem;
+  margin: 4rem auto;
+  max-width: 90%;
 }
 
 /* *  comments pop up */
