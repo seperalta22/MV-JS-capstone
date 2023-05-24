@@ -1,5 +1,4 @@
-const likesApi =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/edecTBZJTxSFvT9kueVx/likes';
+const likesApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/edecTBZJTxSFvT9kueVx/likes';
 
 const getLikes = async () => {
   try {
@@ -8,7 +7,7 @@ const getLikes = async () => {
 
     const cards = Array.from(document.querySelectorAll('.card'));
     const likesCounter = Array.from(
-      document.querySelectorAll('.likes-counter')
+      document.querySelectorAll('.likes-counter'),
     );
 
     cards.forEach((card, index) => {
@@ -18,7 +17,7 @@ const getLikes = async () => {
       }
     });
   } catch (error) {
-    alert('Error fetching likes:', error);
+    error('Error fetching likes:', error);
   }
 };
 
@@ -33,7 +32,7 @@ const addLikes = async () => {
       likeIcons[index].classList.remove('far');
       likeIcons[index].classList.add('fas');
 
-      const currentLikes = parseInt(likeCounters[index].innerHTML);
+      const currentLikes = parseInt(likeCounters[index].innerHTML, 10);
       const updatedLikes = currentLikes + 1;
       likeCounters[index].innerHTML = updatedLikes.toString();
 
@@ -48,7 +47,7 @@ const addLikes = async () => {
           },
         });
       } catch (error) {
-        alert('Error posting like:', error);
+        error('Error posting like:', error);
       }
     });
   });
