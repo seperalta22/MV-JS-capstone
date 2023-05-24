@@ -21,4 +21,36 @@ const getLikes = async () => {
   }
 };
 
-getLikes();
+const addLikes = async () => {
+  const cards = document.querySelectorAll('.card');
+  const likeCounters = document.querySelectorAll('.likes-counter');
+  const likeBtns = document.querySelectorAll('.likes-btn');
+  const likeIcons = document.querySelectorAll('.fa-heart');
+
+  likeBtns.forEach((button, index) => {
+    button.addEventListener('click', async () => {
+      likeIcons[index].classList.remove('far');
+      likeIcons[index].classList.add('fas');
+
+      const currentLikes = parseInt(likeCounters[index].innerHTML, 10);
+      const updatedLikes = currentLikes + 1;
+      likeCounters[index].innerHTML = updatedLikes.toString();
+
+      try {
+        await fetch(likesApi, {
+          method: 'POST',
+          body: JSON.stringify({
+            item_id: cards[index].id,
+          }),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          },
+        });
+      } catch (error) {
+        error('Error posting like:', error);
+      }
+    });
+  });
+};
+
+export { getLikes, addLikes };

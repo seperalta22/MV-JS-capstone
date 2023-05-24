@@ -237,3 +237,15 @@ h1 {
   font-weight: 700;
   cursor: pointer;
 }
+
+.comment-form button:hover {
+  background-color: #3b3b3b;
+}
+
+/* #con-comments{} */
+
+.user-comment {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  font-weight: 500;
+}
