@@ -3,22 +3,22 @@ import pokemonsCount from './pokemonCount.js';
 import { addLikes, getLikes } from './likes.js';
 
 const fetchApiData = async () => {
-  const res = await fetch('https://pokeapi.co/api/v2/pokemon');
-  const data = await res.json();
-  const pokemonArray = data.results;
+	const res = await fetch('https://pokeapi.co/api/v2/pokemon');
+	const data = await res.json();
+	const pokemonArray = data.results;
 
-  const mainSection = document.getElementById('main-section');
+	const mainSection = document.getElementById('main-section');
 
-  await Promise.all(
-    pokemonArray.map(async (pokemon) => {
-      const pokemonRes = await fetch(pokemon.url);
-      const pokemonData = await pokemonRes.json();
+	await Promise.all(
+		pokemonArray.map(async (pokemon) => {
+			const pokemonRes = await fetch(pokemon.url);
+			const pokemonData = await pokemonRes.json();
 
-      const card = document.createElement('div');
-      card.classList.add('card');
-      card.id = `${pokemonData.id}`;
+			const card = document.createElement('div');
+			card.classList.add('card');
+			card.id = `${pokemonData.id}`;
 
-      card.innerHTML = `
+			card.innerHTML = `
       <img
         class="card-image"
         src="${pokemonData.sprites.front_default}"
@@ -30,26 +30,25 @@ const fetchApiData = async () => {
       <button id=${pokemonData.id} class="btn">Comments</button>
     `;
 
-      mainSection.appendChild(card);
+			mainSection.appendChild(card);
 
-      pokemonsCount();
+			pokemonsCount();
 
-      const commentsButton = document.querySelectorAll('.btn');
-      const modal = document.querySelector('.comments');
-      commentsButton.forEach((button) => {
-        if (button.id === pokemonData.id.toString()) {
-          button.addEventListener('click', () => {
-            popUp(pokemonData.id);
-            modal.style.display = 'block';
-          });
+			const commentsButton = document.querySelectorAll('.btn');
+			const modal = document.querySelector('.comments');
+			commentsButton.forEach((button) => {
+				if (button.id === pokemonData.id.toString()) {
+					button.addEventListener('click', () => {
+						popUp(pokemonData.id);
+						modal.style.display = 'block';
+					});
+				}
+			});
+		})
+	);
 
-          addLikes();
-        }
-      });
-    }),
-  );
-
-  await getLikes();
+	await addLikes();
+	await getLikes();
 };
 
 export default fetchApiData;
