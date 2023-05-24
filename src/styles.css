@@ -1,5 +1,6 @@
 :root {
   --color-body: #131313;
+  --dark-olive: darkolivegreen;
 }
 
 *,
@@ -20,13 +21,14 @@ body {
 /* header section */
 header {
   align-items: center;
+  background-color: bisque;
   display: flex;
+  height: 100px;
   justify-content: space-around;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
+  height: 80px;
 }
 
 .nav-menu {
@@ -35,7 +37,9 @@ header {
 }
 
 .nav-link {
-  color: var(--color-body);
+  color: var(--dark-olive);
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 li {
