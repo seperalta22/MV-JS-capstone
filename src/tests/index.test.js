@@ -1,4 +1,5 @@
 import commentsCounter from '../modules/commentsCounter.js';
+import pokemonsCount from '../modules/pokemonCount.js';
 
 describe('commentsCounter', () => {
   beforeEach(() => {
@@ -24,5 +25,21 @@ describe('commentsCounter', () => {
     // Assert
     const countText = document.getElementById('comments-counter');
     expect(countText.innerText).toBe(`Comments (${count})`);
+  });
+});
+
+// Create a DOM mock
+document.body.innerHTML = `
+  <div id="pokemon-count"></div>
+  <div class="card"></div>
+  <div class="card"></div>
+`;
+
+describe('pokemonsCount', () => {
+  test('Update the counter element with the correct number of pokemons', () => {
+    pokemonsCount();
+
+    const countElement = document.getElementById('pokemon-count');
+    expect(countElement.innerText).toBe('2 Pokemons');
   });
 });
