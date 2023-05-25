@@ -33,6 +33,7 @@
     },
     "dependencies": {
         "babelrc": "^0.0.7",
+        "gh-pages": "^5.0.0",
         "jest-environment-jsdom": "^29.5.0",
         "jsdom": "^22.0.0"
     }
