@@ -53,16 +53,16 @@ a {
 
 /* Footer section */
 footer {
-	background-color: darkolivegreen;
+	background-color: bisque;
 	border-top: 1px solid #dfe1e6;
 	text-align: center;
-	position: fixed;
 	bottom: 0;
 	width: 100%;
+	padding-bottom: 0.5rem;
 }
 
 footer p {
-	color: #fff;
+	color: darkolivegreen;
 	font-size: 1.2rem;
 	font-weight: 700;
 	margin: 1rem;
