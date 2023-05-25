@@ -66,4 +66,16 @@ describe('pokemonsCount', () => {
     const countElement = document.getElementById('pokemon-count');
     expect(countElement.innerText).toBe('2 Pokemons');
   });
+
+  test('Update the counter elements with zero when there are no cards', () => {
+    const cardsArr = document.getElementsByClassName('card');
+    while (cardsArr.length > 0) {
+      cardsArr[0].remove();
+    }
+
+    pokemonsCount();
+
+    const countElement = document.getElementById('pokemon-count');
+    expect(countElement.innerText).toBe('0 Pokemons');
+  })
 });
