@@ -61,7 +61,6 @@ document.body.innerHTML = `
 
 describe('pokemonsCount', () => {
   test('Update the counter element with the correct number of pokemons', () => {
-
     // Act
     pokemonsCount();
 
