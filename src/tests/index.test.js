@@ -77,5 +77,5 @@ describe('pokemonsCount', () => {
 
     const countElement = document.getElementById('pokemon-count');
     expect(countElement.innerText).toBe('0 Pokemons');
-  })
+  });
 });
