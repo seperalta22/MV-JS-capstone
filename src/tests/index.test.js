@@ -26,6 +26,30 @@ describe('commentsCounter', () => {
     const countText = document.getElementById('comments-counter');
     expect(countText.innerText).toBe(`Comments (${count})`);
   });
+
+  test('update comment counter successfully when no comments', async () => {
+    // Arrange
+    const count = 0;
+
+    // Act
+    await commentsCounter(count);
+
+    // Assert
+    const countText = document.getElementById('comments-counter');
+    expect(countText.innerText).toBe(`Comments (${count})`);
+  });
+
+  test('update comment counter successfully with large count', async () => {
+    // Arrange
+    const count = 1000000;
+
+    // Act
+    await commentsCounter(count);
+
+    // Assert
+    const countText = document.getElementById('comments-counter');
+    expect(countText.innerText).toBe(`Comments (${count})`);
+  });
 });
 
 // Create a DOM mock
