@@ -1,0 +1,262 @@
+:root {
+  --color-body: #131313;
+  --dark-olive: darkolivegreen;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: darkolivegreen;
+  color: var(--color-body);
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+}
+
+/* header section */
+header {
+  align-items: center;
+  background-color: bisque;
+  display: flex;
+  height: 100px;
+  justify-content: space-around;
+}
+
+.logo {
+  height: 80px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 4rem;
+}
+
+.nav-link {
+  color: var(--dark-olive);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+li {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Footer section */
+footer {
+  background-color: bisque;
+  border-top: 1px solid #dfe1e6;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+
+footer p {
+  color: darkolivegreen;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1rem;
+}
+
+/* Main heading */
+h1 {
+  color: bisque;
+  font-size: 4rem;
+  text-align: center;
+}
+
+/* Cards */
+.card {
+  align-items: center;
+  background-color: bisque;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem 0.8rem;
+  width: 280px;
+}
+
+.card-image {
+  border-radius: 0.5rem;
+  height: auto;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.card-name {
+  margin-bottom: 1rem;
+}
+
+.fa-heart {
+  cursor: pointer;
+  margin-bottom: 0.6rem;
+}
+
+.btn {
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.8rem;
+  width: 50%;
+  margin: 1rem 0 1rem;
+}
+
+.likes-btn {
+  background-color: bisque;
+  border: none;
+}
+
+/* Main section */
+#main-section {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  margin: 4rem auto;
+  max-width: 90%;
+}
+
+/* *  comments pop up */
+
+.comments {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5000;
+}
+
+.text-container {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.comment-container {
+  background-color: #f2f2f2;
+  width: 90%;
+  max-width: 60rem;
+  height: 95%;
+  margin: 1.6rem auto;
+  padding: 1.8rem;
+  gap: 1.2rem;
+  border: 1px solid #dfe1e6;
+  border-radius: 1.6rem;
+  position: relative;
+  overflow-x: auto;
+}
+
+.x {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 4rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.comment-img {
+  display: block;
+  margin: 0 auto;
+  height: 20rem;
+}
+
+.comment-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 1.2rem 0;
+  text-transform: uppercase;
+}
+
+.properties {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.properties li {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.properties li span {
+  font-weight: 400;
+}
+
+.comment-display {
+  margin: 3rem auto;
+}
+
+.com-title {
+  text-align: center;
+  margin: 3rem auto;
+  font-size: 1.5rem;
+}
+
+.form-title {
+  text-align: center;
+  margin: 3rem auto;
+  font-size: 1.5rem;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.2rem;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 60%;
+  padding: 1rem;
+  border: 1px solid #dfe1e6;
+  border-radius: 1.2rem;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  outline: none;
+}
+
+.comment-form button {
+  width: 60%;
+  padding: 1rem;
+  border: none;
+  border-radius: 1.2rem;
+  background-color: #131313;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background-color: #3b3b3b;
+}
+
+/* #con-comments{} */
+
+.user-comment {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  font-weight: 500;
+}
